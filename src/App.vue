@@ -5,8 +5,6 @@ import TreasureFundImg from "@/assets/image/logo-treasure-fund.svg"
 
 const curUrl = window.location.origin;
 
-
-console.log(curUrl,window.location);
 const list = ref([
   {
     name: "量化中心",
@@ -15,22 +13,24 @@ const list = ref([
   },
   {
     name: "成长基金",
-    img: TreasureFundImg, 
+    img: TreasureFundImg,
     port: "5174"
   }
 ])
 function jump(port) {
-  window.open(curUrl+':'+port, '_blank')
+  window.open(curUrl + ':' + port, '_blank')
 }
 </script>
 
 <template>
-  <div class="list">
-    <div class="item"  @click="jump(item.port)" v-for="item in list">
-      <div class="item-img">
-        <img :src="item.img" alt="" />
+  <div>
+    <div class="list">
+      <div class="item" @click="jump(item.port)" v-for="item in list">
+        <div class="item-img">
+          <img :src="item.img" alt="" />
+        </div>
+        <span>{{ item.name }}</span>
       </div>
-      <span>{{ item.name }}</span>
     </div>
   </div>
 </template>
@@ -43,9 +43,11 @@ function jump(port) {
   cursor: pointer;
   font-size: 24px;
 }
+
 .item:hover {
-    background-color: #efc3941e;
-  }
+  background-color: #efc3941e;
+}
+
 .item-img {
   width: 200px;
 }

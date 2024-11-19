@@ -6,9 +6,11 @@
   "scripts": {
     "dev": "vite --host --port 80",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "start": "node ./scripts/run.js"
   },
   "dependencies": {
+    "child_process": "^1.0.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
