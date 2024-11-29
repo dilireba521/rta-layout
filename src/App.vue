@@ -3,10 +3,10 @@ import { ref } from "vue"
 import QuantizationImg from "@/assets/image/logo-quantization.svg"
 import TreasureFundImg from "@/assets/image/logo-treasure-fund.svg"
 import { message, Space } from "ant-design-vue"
-import { LoadingOutlined, CheckCircleFilled } from "@ant-design/icons-vue"
+import { CheckCircleFilled } from "@ant-design/icons-vue"
 var flag = Object.prototype.hasOwnProperty.call(window, 'electronAPI')
-// const curUrl = 'http://127.0.0.1'
-const curUrl = 'http://' + (sessionStorage.getItem('ip') || '127.0.0.1');
+
+const curUrl = 'http://' + (sessionStorage.getItem('ip') || '192.168.0.104');
 
 const list = ref([
   {
@@ -46,6 +46,7 @@ function initData() {
       }
     })
   }
+  
 }
 initData()
 

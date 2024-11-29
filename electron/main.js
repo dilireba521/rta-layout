@@ -53,7 +53,7 @@ function createWindow() {
     // Menu.setApplicationMenu(null)
 
     // 打开开发工具
-    mainWindow.webContents.openDevTools();
+    // mainWindow.webContents.openDevTools();
     // 加载 index.html
     mainWindow.loadFile(path.resolve(__dirname, "../dist/index.html")); // 新增
   }
