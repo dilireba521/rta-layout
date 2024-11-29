@@ -4,7 +4,7 @@ const path = require("path");
 const { isPortInUse } = require("../scripts/utils/tool");
 const { run } = require("../scripts/run");
 const kill = require("kill-port");
-process.noAsar = true
+process.noAsar = true;
 // 前端项目列表
 const projectList = [
   {
@@ -35,8 +35,8 @@ function createWindow() {
       enableRemoteModule: true, // 可以使用remote方法
     },
   });
+  mainWindow.resizable = false;
 
-  
   // 配置热更新
   let env = "development2";
   if (env == "development") {
@@ -54,6 +54,8 @@ function createWindow() {
 
     // 打开开发工具
     // mainWindow.webContents.openDevTools();
+    //隐藏顶部菜单
+    mainWindow.setMenu(null);
     // 加载 index.html
     mainWindow.loadFile(path.resolve(__dirname, "../dist/index.html")); // 新增
   }
