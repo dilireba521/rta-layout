@@ -1,22 +1,37 @@
 {
-  "name": "layout",
+  "name": "rta",
   "version": "0.0.0",
   "private": true,
-  "type": "module",
+  "main": "electron/main.js",
   "scripts": {
-    "dev": "vite --host --port 80",
+    "dev": "vite --host",
     "build": "vite build",
     "preview": "vite preview",
-    "start": "node ./scripts/run.js"
+    "start": "node ./scripts/runInit.js",
+    "server": "node ./scripts/api/service.js",
+    "electron": "electron .",
+    "electron:build": "vite build & electron-builder build --config electron-builder.json"
   },
   "dependencies": {
+    "@ant-design/icons-vue": "^7.0.1",
+    "ant-design-vue": "4.x",
+    "axios": "^1.7.8",
+    "body-parser": "^1.20.3",
     "child_process": "^1.0.2",
+    "cors": "^2.8.5",
+    "express": "^4.21.1",
+    "ip": "^2.0.1",
+    "kill-port": "^2.0.1",
+    "net": "^1.0.2",
     "vue": "^3.4.29",
     "vue-router": "^4.3.3"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",
     "@vitejs/plugin-vue-jsx": "^4.0.0",
+    "electron": "^28.3.3",
+    "electron-builder": "24.9.0",
+    "electron-reload": "2.0.0-alpha.1",
     "vite": "^5.3.1",
     "vite-plugin-vue-devtools": "^7.3.1"
   }

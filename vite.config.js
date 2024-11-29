@@ -7,6 +7,12 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 
 // https://vitejs.dev/config/
 export default defineConfig({
+  base: './',
+  server:{
+    port: 80,
+    cors: true, // 允许跨域
+    hmr: true, // 开启热更新
+  },
   plugins: [
     vue(),
     vueJsx(),

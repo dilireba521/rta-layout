@@ -1,0 +1,12 @@
+{
+    "productName": "RTA",
+    "files": ["./electron", "./dist","./scripts","./public"],
+    "nsis": { "oneClick": false, "allowToChangeInstallationDirectory": true }, 
+    "win": {
+      "target": "nsis", 
+      "icon": "./public/favicon.ico"
+    },
+    "directories": {
+      "output": "./buileder"
+    }
+  }
