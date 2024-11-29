@@ -12,7 +12,7 @@ const list = ref([
   {
     name: "量化中心",
     img: QuantizationImg,
-    port: "8000",
+    port: "5173",
     status: false
   },
   {
@@ -24,7 +24,7 @@ const list = ref([
 ])
 function jump(params) {
   const { port, status } = params
-  if (!status) return
+  if (!status && flag) return
   let _url = curUrl + ':' + port
   if (flag) {
     window.electronAPI.onOpenUrl(_url)
