@@ -19,6 +19,10 @@ const projectList = [
     port: "5174",
     cwd: "D:/project/treasure-fund",
   },
+  {
+    port: "5175",
+    cwd: "D:/project/rta-treasure",
+  },
 ];
 
 function createWindow() {

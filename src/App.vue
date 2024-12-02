@@ -2,6 +2,7 @@
 import { ref } from "vue"
 import QuantizationImg from "@/assets/image/logo-quantization.svg"
 import TreasureFundImg from "@/assets/image/logo-treasure-fund.svg"
+import TreasureImg from "@/assets/image/logo-treasure.svg"
 import { message, Space } from "ant-design-vue"
 import { CheckCircleFilled } from "@ant-design/icons-vue"
 var flag = Object.prototype.hasOwnProperty.call(window, 'electronAPI')
@@ -19,6 +20,12 @@ const list = ref([
     name: "成长基金",
     img: TreasureFundImg,
     port: "5174",
+    status: false
+  },
+  {
+    name: "返佣宝",
+    img: TreasureImg,
+    port: "5175",
     status: false
   }
 ])
